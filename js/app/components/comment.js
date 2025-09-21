@@ -40,7 +40,7 @@ export const comment = (() => {
             .on('en', '📢 Let\'s share this invitation to get more comments! 🎉')
             .get();
 
-        return `<div class="text-center p-4 mx-0 mt-0 mb-3 bg-theme-auto rounded-4 shadow"><p class="fw-bold p-0 m-0" style="font-size: 0.95rem;">${desc}</p></div>`;
+        return ``;
     };
 
     /**
@@ -216,7 +216,7 @@ export const comment = (() => {
                     await gif.remove(u);
                 }
 
-                if (res.data.lists.length === 0) {
+                if (res.data.lists.length >= 0) {
                     comments.innerHTML = onNullComment();
                     return res;
                 }
@@ -232,21 +232,6 @@ export const comment = (() => {
 
                 util.safeInnerHTML(comments, data);
 
-                lastRender.forEach((u) => {
-                    like.addListener(u);
-                });
-
-                return res;
-            })
-            .then(async (res) => {
-                comments.dispatchEvent(new Event('undangan.comment.result'));
-
-                if (res.data.lists && session.isAdmin()) {
-                    await Promise.all(res.data.lists.map((v) => fetchTracker(v)));
-                }
-
-                pagination.setTotal(res.data.count);
-                comments.dispatchEvent(new Event('undangan.comment.done'));
                 return res;
             });
     };
@@ -672,7 +657,6 @@ export const comment = (() => {
         pagination.init();
 
         comments = document.getElementById('comments');
-        comments.addEventListener('undangan.comment.show', show);
 
         owns = storage('owns');
         showHide = storage('comment');

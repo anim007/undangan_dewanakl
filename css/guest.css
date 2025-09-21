@@ -64,11 +64,13 @@ html[data-bs-theme="dark"] .bg-light-dark {
 }
 
 html[data-bs-theme="light"] .bg-white-black {
-    background-color: rgb(var(--bs-white-rgb));
+    /* background-color: rgb(var(--bs-white-rgb)); */
+    background-image: url(../assets/images/bg-light.jpg);
 }
 
 html[data-bs-theme="dark"] .bg-white-black {
-    background-color: rgb(var(--bs-black-rgb));
+    /* background-color: rgb(var(--bs-black-rgb)); */
+    background-image: url(../assets/images/bg-dark-fotor.jpg);
 }
 
 .bg-cover-home {
