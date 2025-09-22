@@ -108,9 +108,7 @@ export const theme = (() => {
         themes = storage('theme');
         metaTheme = document.querySelector('meta[name="theme-color"]');
 
-        if (!themes.has('active')) {
-            window.matchMedia('(prefers-color-scheme: dark)').matches ? setDark() : setLight();
-        }
+        setLight(); // default
 
         switch (document.documentElement.getAttribute('data-bs-theme')) {
             case 'dark':
