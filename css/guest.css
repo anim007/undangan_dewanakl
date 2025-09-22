@@ -1,9 +1,29 @@
 @import url("common.css");
 @import url("animation.css");
 
+@font-face {
+    font-family: photograph;
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet') format('woff2');
+}
+
+:root {
+    --bs-btn-font-family: "Noto Sans", sans-serif !important;
+    --primary-color: rgb(75, 91, 64) !important;
+    --secondary-color: rgb(156, 178, 158) !important;
+    --background-color: rgb(229, 246, 243) !important;
+}
+
 html {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif !important;
+    letter-spacing: 1px !important;
 }
 
 .with-scrollbar {
@@ -17,6 +37,34 @@ html {
 
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
+}
+
+.tangerine-regular {
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-bold {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-bold {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 .img-center-crop {
@@ -64,8 +112,7 @@ html[data-bs-theme="dark"] .bg-light-dark {
 }
 
 html[data-bs-theme="light"] .bg-white-black {
-    /* background-color: rgb(var(--bs-white-rgb)); */
-    background-image: url(../assets/images/bg-light.jpg);
+    background-color: var(--background-color);
 }
 
 html[data-bs-theme="dark"] .bg-white-black {
@@ -88,6 +135,95 @@ html[data-bs-theme="dark"] .bg-white-black {
     cursor: pointer;
 }
 
+.fs-large {
+    font-size: 4rem !important;
+}
+
+.fs-medium {
+    font-size: 3rem !important;
+}
+
+.ornaments-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.cover-section {
+    position: fixed;
+    z-index: 1000;
+    transition: all 1s ease-out;
+    background-color: var(--color-main);
+    overflow: hidden;
+    width: 100%;
+}
+
+.cover-section .orn-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    transform: translate(-30%, -10%);
+}
+
+.cover-section .orn-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    transform: translate(30%, -10%) scaleX(-1);
+}
+
+.cover-section .orn-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    transform: translate(-50%, 10%);
+}
+
+.cover-section .orn-6 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    transform: translate(50%, 10%);
+}
+
+.cover-section .orn-3 .orn-4 {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 100%;
+}
+
+.cover-section .orn-3 .orn-5 {
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    width: 60%;
+    transform: rotate(30deg) scaleX(-1);
+}
+
+.cover-section .orn-6 .orn-7 {
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+.cover-section .orn-6 .orn-8 {
+    position: absolute;
+    top: 65%;
+    right: 80%;
+    width: 60%;
+    transform: rotate(-30deg);
+}
+
 @media screen and (max-width: 992px) {
     .width-loading {
         width: 50%;
@@ -97,6 +233,42 @@ html[data-bs-theme="dark"] .bg-white-black {
 @media screen and (max-width: 576px) {
     .width-loading {
         width: 75%;
+    }
+}
+
+@media (max-width: 575px) {
+    .cover-section .orn-1 {
+        width: 40%;
+    }
+
+    .cover-section .orn-2 {
+        width: 40%;
+    }
+
+    .cover-section .orn-3 {
+        width: 50%;
+    }
+
+    .cover-section .orn-6 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .cover-section .orn-1 {
+        width: 30%;
+    }
+
+    .cover-section .orn-2 {
+        width: 30%;
+    }
+
+    .cover-section .orn-3 {
+        width: 40%;
+    }
+
+    .cover-section .orn-6 {
+        width: 40%;
     }
 }
 
