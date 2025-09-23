@@ -24,6 +24,7 @@ html {
 body {
     font-family: "Noto Sans", sans-serif !important;
     letter-spacing: 1px !important;
+    font-size: 16px !important;
 }
 
 .with-scrollbar {
@@ -104,7 +105,7 @@ html[data-bs-theme="dark"] .color-theme-svg {
 }
 
 html[data-bs-theme="light"] .bg-light-dark {
-    background-color: rgb(var(--bs-light-rgb));
+    background-color: var(--background-color);
 }
 
 html[data-bs-theme="dark"] .bg-light-dark {
@@ -169,11 +170,27 @@ html[data-bs-theme="dark"] .bg-white-black {
     transform: translate(-30%, -10%);
 }
 
+.cover-section .orn-1.inside {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 12%;
+    transform: translate(-30%, -10%);
+}
+
 .cover-section .orn-2 {
     position: absolute;
     top: 0;
     right: 0;
     width: 15%;
+    transform: translate(30%, -10%) scaleX(-1);
+}
+
+.cover-section .orn-2.inside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12%;
     transform: translate(30%, -10%) scaleX(-1);
 }
 
@@ -185,11 +202,27 @@ html[data-bs-theme="dark"] .bg-white-black {
     transform: translate(-50%, 10%);
 }
 
+.cover-section .orn-3.inside {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20%;
+    transform: translate(-50%, 10%);
+}
+
 .cover-section .orn-6 {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 25%;
+    transform: translate(50%, 10%);
+}
+
+.cover-section .orn-6.inside {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
     transform: translate(50%, 10%);
 }
 

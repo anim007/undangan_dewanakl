@@ -59,7 +59,7 @@ html[data-bs-theme="dark"] .bg-theme-auto {
 }
 
 html[data-bs-theme="light"] .bg-theme-auto {
-    background-color: var(--bs-gray-100);
+    background-color: var(--bs-white);
 }
 
 html[data-bs-theme="dark"] .btn-outline-auto {
