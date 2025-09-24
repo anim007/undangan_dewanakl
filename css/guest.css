@@ -285,6 +285,16 @@ html[data-bs-theme="dark"] .bg-white-black {
     .cover-section .orn-6 {
         width: 50%;
     }
+
+    .cover-section .orn-1.inside {
+        left: 0;
+        width: 40%;
+    }
+
+    .cover-section .orn-3.inside {
+        left: 0;
+        width: 50%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -301,6 +311,16 @@ html[data-bs-theme="dark"] .bg-white-black {
     }
 
     .cover-section .orn-6 {
+        width: 40%;
+    }
+
+    .cover-section .orn-1.inside {
+        left: 0;
+        width: 30%;
+    }
+
+    .cover-section .orn-3.inside {
+        left: 0;
         width: 40%;
     }
 }
