@@ -108,7 +108,7 @@ export const theme = (() => {
         themes = storage('theme');
         metaTheme = document.querySelector('meta[name="theme-color"]');
 
-        setLight(); // default
+        setDark(); // default
 
         switch (document.documentElement.getAttribute('data-bs-theme')) {
             case 'dark':
